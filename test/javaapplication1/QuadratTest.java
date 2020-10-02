@@ -91,5 +91,11 @@ public class QuadratTest {
         Assert.assertFalse(instance.interior(new Coordenada(111.0, 111.0)));
         Assert.assertFalse(instance.interior(new Coordenada(123.0, 112.0)));
     }
+    
+    // Homework
+    @Test
+    public void testExerior() {
+        
+    }
 
 }
