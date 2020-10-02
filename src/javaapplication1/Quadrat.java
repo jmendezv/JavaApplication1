@@ -96,4 +96,9 @@ public class Quadrat {
         }
         return false;
     }
+    
+    // Homework
+    public boolean exterior(Coordenada punt) {
+        return false;
+    }
 }
