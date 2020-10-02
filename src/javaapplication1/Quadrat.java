@@ -4,7 +4,7 @@
  * and open the template in the editor.
  * 
  * https://www.vogella.com/tutorials/JUnit/article.html
-*/
+ */
 package javaapplication1;
 
 class Coordenada {
@@ -37,8 +37,7 @@ class Coordenada {
     public String toString() {
         return "Coordenada{" + "x=" + x + ", y=" + y + '}';
     }
-    
-   
+
 }
 
 /**
@@ -75,16 +74,26 @@ public class Quadrat {
     public String toString() {
         return "Quadrat{" + "coordenada=" + coordenada + ", costat=" + costat + '}';
     }
-    
+
     public double area() {
         return costat * costat;
     }
-    
+
     public double perimetre() {
         return 4 * costat;
     }
-    
+
     public Coordenada cantonadaInferiorDreta() {
         return new Coordenada(coordenada.getX() + costat, coordenada.getY() + costat);
+    }
+
+    public boolean interior(Coordenada punt) {
+        Coordenada fin = cantonadaInferiorDreta();
+        if (punt.getX() >= coordenada.getX() && punt.getY() >= coordenada.getY()) {
+            if (punt.getX() <= fin.getX() && punt.getY() <= fin.getY()) {
+                return true;
+            }
+        }
+        return false;
     }
 }
