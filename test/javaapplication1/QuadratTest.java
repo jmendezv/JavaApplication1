@@ -11,7 +11,6 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.junit.Ignore;
 
 /**
  *
@@ -60,16 +59,20 @@ public class QuadratTest {
      * Test of perimetre method, of class Quadrat.
      */
     @Test
-    @Ignore
+    // @Ignore
     public void testPerimetre() {
+        Assert.assertEquals(40.0, instance.perimetre(), 1.0E-3);
     }
 
     /**
      * Test of cantonadaInferiorEsquerra method, of class Quadrat.
      */
     @Test
-    @Ignore
-    public void testCantonadaInferiorEsquerra() {
+    // @Ignore
+    public void testCantonadaInferiorDreta() {
+        Coordenada coordenada = instance.cantonadaInferiorDreta();
+        Assert.assertEquals(10, coordenada.getX(), 1.0E-3);
+        Assert.assertEquals(10, coordenada.getY(), 1.0E-3);
     }
 
 }
