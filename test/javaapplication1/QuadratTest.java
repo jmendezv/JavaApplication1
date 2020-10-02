@@ -19,6 +19,10 @@ import org.junit.Test;
 public class QuadratTest {
 
     private Quadrat instance;
+    
+    private final double POS_X = 0.0;
+    private final double POS_Y = 0.0;
+    private final double LADO = 10.0;
 
     public QuadratTest() {
     }
@@ -38,7 +42,7 @@ public class QuadratTest {
 
     @Before
     public void setUp() {
-        instance = new Quadrat(new Coordenada(0, 0), 10);
+        instance = new Quadrat(new Coordenada(POS_X, POS_Y), LADO);
     }
 
     @After
@@ -52,7 +56,7 @@ public class QuadratTest {
     @Test
     public void testArea() {
         // 1.0E-3 == 0-001
-        Assert.assertEquals(100.0, instance.area(), 1.0E-3);
+        Assert.assertEquals(LADO * LADO, instance.area(), 1.0E-3);
     }
 
     /**
@@ -61,7 +65,7 @@ public class QuadratTest {
     @Test
     // @Ignore
     public void testPerimetre() {
-        Assert.assertEquals(40.0, instance.perimetre(), 1.0E-3);
+        Assert.assertEquals(4 * LADO, instance.perimetre(), 1.0E-3);
     }
 
     /**
@@ -71,8 +75,8 @@ public class QuadratTest {
     // @Ignore
     public void testCantonadaInferiorDreta() {
         Coordenada coordenada = instance.cantonadaInferiorDreta();
-        Assert.assertEquals(10, coordenada.getX(), 1.0E-3);
-        Assert.assertEquals(10, coordenada.getY(), 1.0E-3);
+        Assert.assertEquals(POS_X + LADO, coordenada.getX(), 1.0E-3);
+        Assert.assertEquals(POS_Y + LADO, coordenada.getY(), 1.0E-3);
     }
 
 }
