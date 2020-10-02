@@ -84,7 +84,7 @@ public class Quadrat {
         return 4 * costat;
     }
     
-    public Coordenada cantonadaInferiorEsquerra() {
+    public Coordenada cantonadaInferiorDreta() {
         return new Coordenada(coordenada.getX() + costat, coordenada.getY() + costat);
     }
 }
