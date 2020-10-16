@@ -20,6 +20,9 @@ import org.junit.runners.Parameterized.Parameter;
 /**
  *
  * @author pep
+ * 
+ * Prueba a fondo el método ingresa de la clase CuentaCorriente
+ * 
  */
 @RunWith(Parameterized.class)
 public class CuentaCorrienteTest2 {
