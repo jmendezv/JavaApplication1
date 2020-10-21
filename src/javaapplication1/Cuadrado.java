@@ -56,7 +56,7 @@ public class Cuadrado {
         return new Coord(coordenada.getX() + lado, coordenada.getY() + lado);
     }
     
-    // Devuele true si el punto esta dentro de este cuadrado y false si no
+    // Devuelve true si el punto esta dentro de este cuadrado y false si no
     public boolean interior(Coord punto) {
         // ....
         return false;

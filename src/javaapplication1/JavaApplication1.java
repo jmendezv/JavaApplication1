@@ -18,7 +18,7 @@ public class JavaApplication1 {
         // TODO code application logic here
         CuentaCorriente cc1 = new CuentaCorriente("Pepe", 1000.0);
         System.out.println(cc1);
-        System.out.println(1.0E-3);
+        //System.out.println(1.0E-3);
     }
     
 }
