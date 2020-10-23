@@ -32,9 +32,9 @@ public class CuentaCorrienteTest2 {
     private final Double SALDO_INICIAL = 50.0;
 
     @Parameter(0)
-    public double ingres;
+    public Double ingres;
     @Parameter(1)
-    public double saldo;
+    public Double saldo;
 
     @Parameterized.Parameters
     public static Collection<Double[]> data() {

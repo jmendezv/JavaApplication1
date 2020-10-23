@@ -14,7 +14,8 @@ import java.util.ArrayList;
 public class CarritoDeLaCompra {
     private ArrayList<Detalle> carrito = new ArrayList();
     
-    public void añade(Detalle detalle) {
+    public void añade(Detalle detalle) throws Exception {
+        if (detalle == null) throw new Exception("Detalle es nulo");
         carrito.add(detalle);
     }
     
@@ -23,10 +24,15 @@ public class CarritoDeLaCompra {
     }
     
     public double checkout() {
+        // Inicializams una variable total a 0
         double total = 0;
+        // calculamos el tamaño del carrito
         int size = carrito.size();
+        // recorremos la lista
         for (int i = 0; i < size; i++) {
+            // recuperamos detalle i-ésimo, el la posición i
             Detalle detalle = carrito.get(i);
+            // acumulamos el total
             total += 
                     detalle.getCantidad() * 
                     detalle.getItem().getPrecio();

@@ -25,13 +25,14 @@ public class CuentaCorrienteTest3 {
     
     private CuentaCorriente instance;
     
-    private double abono;
-    private double saldo;
+    private Double abono;
+    private Double saldo;
 
     public CuentaCorrienteTest3(double abono, double saldo) {
         this.abono = abono;
         this.saldo = saldo;
     }
+    
     
     @Parameterized.Parameters
     public static Collection<Double[]> data() {
