@@ -5,8 +5,10 @@
  */
 package javaapplication1;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -35,8 +37,8 @@ public class CuentaCorrienteTest3 {
     
     
     @Parameterized.Parameters
-    public static Collection<Double[]> data() {
-        Double[][] data = new Double[][] {
+    public static List<Object[]> data() {
+        Object[][] data = new Object[][] {
                 {10.0, 90.0},
                 {1.0, 99.0},
                 {5.0, 95.0},

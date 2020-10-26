@@ -6,6 +6,7 @@
 package javaapplication1;
 
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 /**
  *
@@ -15,15 +16,20 @@ public class CarritoDeLaCompra {
     private ArrayList<Detalle> carrito = new ArrayList();
     
     public void añade(Detalle detalle) throws Exception {
-        if (detalle == null) throw new Exception("Detalle es nulo");
+        if (detalle == null) throw new Exception("Detalle es nulo", 
+                new IllegalAccessException());
+        
+        TimeUnit.MILLISECONDS.sleep(240);
         carrito.add(detalle);
     }
     
-    public void elimina(Detalle detalle) {
+    public void elimina(Detalle detalle) throws Exception {
+        if (detalle == null) throw new Exception("Detalle es nulo", 
+        new IllegalAccessException());
         carrito.remove(detalle);
     }
     
-    public double checkout() {
+    public double checkout()  {
         // Inicializams una variable total a 0
         double total = 0;
         // calculamos el tamaño del carrito
